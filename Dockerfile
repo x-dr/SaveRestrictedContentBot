@@ -1,4 +1,4 @@
-FROM nginx
+FROM python:3.9.2-slim-buster
 
 WORKDIR /app
 COPY . .
@@ -14,10 +14,6 @@ RUN apt -qq update && apt -qq install -y bash python3 python3-pip ffmpeg  \
     # && add-apt-repository ppa:ondrej/php \
     # && apt -qq update && apt -qq install -y php7.3 php7.3-fpm 
 
-COPY nginx/default.conf.template /etc/nginx/conf.d/default.conf.template
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-COPY nginx/index.html /usr/share/nginx/html/index/
-COPY nginx/tgpic /usr/share/nginx/html/tgpic
 
 
 # Run the app
