@@ -3,12 +3,12 @@ from pathlib import Path
 from main.utils import load_plugins
 import logging
 from . import bot
-from fastapi import FastAPI
-import time
-# from getdata import get_data
-app = FastAPI()
-import requests
-import uvicorn
+# from fastapi import FastAPI
+# import time
+# # from getdata import get_data
+# app = FastAPI()
+# import requests
+# import uvicorn
 from os import environ
 
 PORT = int(environ.get("PORT"))
@@ -16,9 +16,9 @@ PORT = int(environ.get("PORT"))
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+# @app.get("/")
+# def read_root():
+#     return {"Hello": "World"}
 
 
 
@@ -35,7 +35,7 @@ print("Successfully deployed!")
 print("By MaheshChauhan • DroneBots")
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=PORT)  
+    # uvicorn.run(app, host="0.0.0.0", port=PORT)  
     bot.run_until_disconnected()
     
     
