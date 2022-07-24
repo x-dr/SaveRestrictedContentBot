@@ -15,5 +15,5 @@ RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg  \
 
 # Run the app
 # CMD ["python3","-m","main"]
-CMD [ "bash","start.sh" ]
+ENTRYPOINT ["./start.sh"]
 
