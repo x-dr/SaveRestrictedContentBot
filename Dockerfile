@@ -14,4 +14,4 @@ RUN apk add --no-cache --update  bash ffmpeg  \
 
 
 # Run the app
-CMD ["python3","-m","WebStreamer"]
+CMD ["python3","-m","main"]
