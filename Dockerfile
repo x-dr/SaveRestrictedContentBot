@@ -8,6 +8,7 @@ COPY . .
 RUN apt -qq update && apt -qq install -y git python3 python3-pip ffmpeg  \                          
     && pip3 install --no-cache-dir -q -r requirements.txt \
     && chmod +x start.sh \
+    && chmod 777 /app/* \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone 
 
