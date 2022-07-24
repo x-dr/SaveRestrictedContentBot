@@ -15,7 +15,7 @@ def read_root():
     return {"Hello": "World"}
 
 def runweb():
-    uvicorn.run(app, host="0.0.0.0", port=PORT,reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)
 
 
 
