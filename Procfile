@@ -1,1 +1,0 @@
-worker: /bin/sh -c python -m main

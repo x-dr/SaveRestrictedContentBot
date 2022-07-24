@@ -1,0 +1,15 @@
+server {
+  listen $PORT default_server;
+
+  location / {
+    root   /usr/share/nginx/html/index;
+    index  index.html index.htm;
+  }
+  location /tgpic {
+      alias   /usr/share/nginx/html/tgpic;
+      port_in_redirect off;
+      index  index.html index.htm index.php;
+  }
+  
+  
+}

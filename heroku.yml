@@ -1,2 +1,3 @@
-run:
-  web: bash bash.sh
+build:
+  docker:
+    web: Dockerfile
