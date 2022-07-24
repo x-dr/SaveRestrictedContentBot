@@ -4,7 +4,7 @@
     "logo": "",
     "keywords": [
         "telegram",
-        "web"
+        "bot"
     ],
     "repository": "https://github.com/vasusen-code/SaveRestrictedContentBot",
     "stack": "container",
