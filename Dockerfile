@@ -5,7 +5,8 @@ COPY . .
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apk add --no-cache --update  bash ffmpeg  \                          
+RUN apk add --no-cache --update  bash ffmpeg  \ 
+    && chmod 777 /app/* \                         
     && pip3 install --no-cache-dir -q -r requirements.txt \
     && rm -rf /var/cache/apk/* \
     && chmod +x start.sh \
@@ -14,4 +15,5 @@ RUN apk add --no-cache --update  bash ffmpeg  \
 
 
 # Run the app
-CMD ["python3","-m","main"]
+# CMD ["python3","-m","main"]
+CMD ["bash","bash.sh"]
