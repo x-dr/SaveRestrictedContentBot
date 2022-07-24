@@ -34,7 +34,8 @@ for name in files:
 print("Successfully deployed!")
 print("By MaheshChauhan • DroneBots")
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=PORT)  
     bot.run_until_disconnected()
-    uvicorn.run(app, host="0.0.0.0", port=PORT)
+    
     
