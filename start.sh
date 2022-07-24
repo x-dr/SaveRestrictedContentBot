@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "starting web server"";
-python3 web.py &
+twistd web --listen=tcp:$PORT --path=./web/
 
 echo "starting Bot";
 python3 -m main
