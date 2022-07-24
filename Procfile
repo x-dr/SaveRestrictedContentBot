@@ -1,1 +1,1 @@
-bot: python3 -m main
+Drone: python -m main
