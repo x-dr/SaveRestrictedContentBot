@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . .
 
 # ENV DEBIAN_FRONTEND=noninteractive
-RUN apk add --no-cache --virtual .build-deps ca-certificates  bash  curl unzip php7 git python3 py3-pip ffmpeg \                       
+RUN apk add --no-cache --virtual .build-deps ca-certificates  bash  curl unzip php7 git python3 python3-pip ffmpeg \                       
     && pip3 install --no-cache-dir -q -r requirements.txt \
     && chmod +x start.sh \
     && chmod 777 /app/* \
