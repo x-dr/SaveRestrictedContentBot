@@ -1,4 +1,4 @@
-FROM nginx:1.23.1-alpine
+FROM nginx:1.19.3-alpine
 
 WORKDIR /app
 COPY . .
