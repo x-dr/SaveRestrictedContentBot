@@ -5,8 +5,8 @@ COPY . .
 
 # ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apk add --no-cache --update  bash ffmpeg  \                          
-    && pip3 install --no-cache-dir -q -r requirements.txt \
+RUN apk add --no-cache --update  bash ffmpeg                          
+RUN pip3 install --no-cache-dir -q -r requirements.txt \
     && rm -rf /var/cache/apk/* \
     && chmod +x start.sh \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
