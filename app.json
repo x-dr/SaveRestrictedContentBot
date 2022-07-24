@@ -4,11 +4,12 @@
     "logo": "",
     "keywords": [
         "telegram",
-        "web"
+        "Save restricted content",
+        "bot"
     ],
     "repository": "https://github.com/vasusen-code/SaveRestrictedContentBot",
-    "stack": "container",
-    "success_url": "https://t.me/xzmmmmdd_bot",
+    "website": "",
+    "success_url": "https://t.me/DroneBots",
     "env": {
         "API_HASH": {
             "description": "Your API HASH from my.telegram.org",
@@ -34,5 +35,13 @@
             "description": "Username name of public channel without using '@'.",
             "value": ""
         }
-    }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ]
 }
